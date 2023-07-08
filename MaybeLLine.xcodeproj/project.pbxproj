@@ -13,6 +13,9 @@
 		584EB13A2A5930FD00987F58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 584EB1382A5930FD00987F58 /* Main.storyboard */; };
 		584EB13C2A5930FF00987F58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584EB13B2A5930FF00987F58 /* Assets.xcassets */; };
 		584EB13F2A5930FF00987F58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 584EB13D2A5930FF00987F58 /* LaunchScreen.storyboard */; };
+		584EB1472A59318A00987F58 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EB1462A59318A00987F58 /* DataModel.swift */; };
+		584EB1512A593B1900987F58 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EB14F2A593B1900987F58 /* MyTableViewCell.swift */; };
+		584EB1522A593B1900987F58 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584EB1502A593B1900987F58 /* MyTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		584EB13B2A5930FF00987F58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		584EB13E2A5930FF00987F58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		584EB1402A5930FF00987F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		584EB1462A59318A00987F58 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		584EB14F2A593B1900987F58 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		584EB1502A593B1900987F58 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		584EB1312A5930FD00987F58 /* MaybeLLine */ = {
 			isa = PBXGroup;
 			children = (
-				584EB1322A5930FD00987F58 /* AppDelegate.swift */,
-				584EB1342A5930FD00987F58 /* SceneDelegate.swift */,
-				584EB1362A5930FD00987F58 /* ViewController.swift */,
+				584EB1482A5931A900987F58 /* Model */,
+				584EB1492A5931BD00987F58 /* View */,
+				584EB14A2A5931E500987F58 /* Controller */,
 				584EB1382A5930FD00987F58 /* Main.storyboard */,
 				584EB13B2A5930FF00987F58 /* Assets.xcassets */,
 				584EB13D2A5930FF00987F58 /* LaunchScreen.storyboard */,
 				584EB1402A5930FF00987F58 /* Info.plist */,
 			);
 			path = MaybeLLine;
+			sourceTree = "<group>";
+		};
+		584EB1482A5931A900987F58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				584EB1342A5930FD00987F58 /* SceneDelegate.swift */,
+				584EB1322A5930FD00987F58 /* AppDelegate.swift */,
+				584EB1462A59318A00987F58 /* DataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		584EB1492A5931BD00987F58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				584EB14F2A593B1900987F58 /* MyTableViewCell.swift */,
+				584EB1502A593B1900987F58 /* MyTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		584EB14A2A5931E500987F58 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				584EB1362A5930FD00987F58 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584EB1522A593B1900987F58 /* MyTableViewCell.xib in Resources */,
 				584EB13F2A5930FF00987F58 /* LaunchScreen.storyboard in Resources */,
 				584EB13C2A5930FF00987F58 /* Assets.xcassets in Resources */,
 				584EB13A2A5930FD00987F58 /* Main.storyboard in Resources */,
@@ -139,8 +173,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				584EB1372A5930FD00987F58 /* ViewController.swift in Sources */,
+				584EB1472A59318A00987F58 /* DataModel.swift in Sources */,
 				584EB1332A5930FD00987F58 /* AppDelegate.swift in Sources */,
 				584EB1352A5930FD00987F58 /* SceneDelegate.swift in Sources */,
+				584EB1512A593B1900987F58 /* MyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +337,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Suvendu-Kumar.MaybeLLine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,6 +367,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Suvendu-Kumar.MaybeLLine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
